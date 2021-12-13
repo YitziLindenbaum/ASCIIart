@@ -1,5 +1,6 @@
 package ascii_art;
 
+import ascii_art.img_to_char.BrightnessImgCharMatcher;
 import ascii_art.img_to_char.CharRenderer;
 
 /**
@@ -12,7 +13,8 @@ public class Driver {
      * @param args
      */
     public static void main(String[] args) {
-        boolean[][] cs = CharRenderer.getImg('d', 16, "Ariel");
-        CharRenderer.printBoolArr(cs);
+        //Character[] test = {'a', 'b', 'd', 'c'};
+
+        }
     }
-}
+
