@@ -2,7 +2,28 @@ package ascii_art.img_to_char;
 
 import image.Image;
 
+import java.util.Comparator;
+
 public class BrightnessImgCharMatcher {
+
+    private class CharComparator implements Comparator<Character> {
+
+
+        @Override
+        public int compare(Character c1, Character c2) {
+
+            float brightness1 = getCharBrightness(c1);
+            float brightness2 = getCharBrightness(c2);
+
+            if (brightness1 == brightness2) {
+                return 0;
+            }
+            if (brightness1 > brightness2) {
+                return 1;
+            }
+            return -1;
+        }
+    }
 
     private final Image img;
     private final String fontName;
@@ -32,8 +53,11 @@ public class BrightnessImgCharMatcher {
     }
 
 
+
     private char[][] convertImageToAscii() {
         char[][] ret = {{'0'}};
         return ret;
     }
+
+
 }
